@@ -1,5 +1,19 @@
 ---
-layout: home
+layout: page
 title: IC Servis, s.r.o.
 subtitle: iOS Developer
 ---
+<p>We develop applications for iOS since 2011.</p>
+
+<h1>Currenty on App Store:</h1>
+
+<ul id="apps-list">
+{% for app in site.data.appstore %}
+  <li>
+    <img src="./assets/img/{{ app.icon }}" />
+    <h2><a href="./{{ app.page }}/">{{ app.title }}</a></h2>
+    <p>{{ app.description }}</p>
+    <div><a href="{{ app.link }}">App Store Link</a></div>
+  </li>
+{% endfor %}
+</ul>
